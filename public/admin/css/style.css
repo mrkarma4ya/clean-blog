@@ -1,0 +1,69 @@
+.stat-cards {
+  cursor: pointer;
+}
+
+.stat-cards:hover {
+  box-shadow: 0 6px 10px -4px rgba(255, 196, 0, 0.719);
+}
+
+.sidebar .nav li > a,
+.off-canvas-sidebar .nav li > a {
+  margin: 0px 15px;
+  opacity: 1;
+}
+
+.card .avatar {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.card-user .avatar {
+  width: 124px;
+  height: 124px;
+  border: 1px solid #FFFFFF;
+  position: relative;
+  display: block;
+}
+
+.avatar-area {
+  width: 124px;
+}
+
+.edit-avatar {
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -235%);
+          transform: translate(-50%, -235%);
+  text-align: center;
+}
+
+.avatar-area:hover .avatar {
+  opacity: 0.5;
+}
+
+.avatar-area:hover .edit-avatar {
+  opacity: 1;
+}
+
+.edit-cover {
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translate(-110%, 0);
+          transform: translate(-110%, 0);
+  text-align: center;
+  cursor: pointer;
+}
+
+.image:hover .cover_image {
+  opacity: 0.5;
+}
+
+.image:hover .edit-cover {
+  opacity: 1;
+}
+
