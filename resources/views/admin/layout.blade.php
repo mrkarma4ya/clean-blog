@@ -118,7 +118,7 @@ The above copyright notice and this permission notice shall be included in all c
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
-                        <form>
+                        {{-- <form>
                             <div class="input-group no-border">
                                 <input type="text" value="" class="form-control" placeholder="Search...">
                                 <div class="input-group-append">
@@ -127,7 +127,7 @@ The above copyright notice and this permission notice shall be included in all c
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </form> --}}
                         <ul class="navbar-nav">
                             <li class="nav-item btn-rotate dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"

@@ -6,8 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Clean Blog</title> 
+  <title>Clean Blog</title>
   <link href="{{asset('css/app.css')}}" rel="stylesheet">
+
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+  <!--Select2-->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js" defer></script>
+
+
 </head>
 
 <body>
@@ -36,7 +46,7 @@
               <a class="nav-link" href="{{route('contact')}}">Contact</a>
             </li>
             @guest
-            
+
             <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
             </li>
@@ -56,6 +66,9 @@
                 <a class="dropdown-item" href="{{ route('dashboard') }}">
                   {{ __('Dashboard') }}
                 </a>
+                <a class="dropdown-item" href="{{route('users-show',['user'=>auth()->user()->username])}}">
+                  {{ __('Profile') }}
+                </a>
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                   {{ __('Logout') }}
@@ -65,7 +78,7 @@
                   @csrf
                 </form>
               </div>
-              
+
             </li>
             @endguest
           </ul>
@@ -111,9 +124,12 @@
       </div>
     </div>
   </footer>
+
+  <script src="{{asset('js/app.js')}}"></script>
+
   
-  <script src="{{asset('js/app.js')}}"></script>  
- 
+
+
 
 </body>
 

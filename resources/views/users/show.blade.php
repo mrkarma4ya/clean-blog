@@ -12,7 +12,7 @@
                     <div class="col-md-2 mt-2"><img src="/storage/{{$user->avatar}}" alt="" width="100%" class="avatar"></div>
                     <div class="col-md-10">
                         <h1>{{$user->name}}</h1>
-                        <h2 class="subheading">@ {{$user->username}}</h2>
+                        <h2 class="subheading">&commat;{{$user->username}}</h2>
                         <span class="meta"> {{$user->quote}}</span>
                     </div>
                    

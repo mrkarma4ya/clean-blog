@@ -51,6 +51,7 @@ class PostController extends Controller
     public function store(StorePost $request)
     {
         //
+        
         $request->validated(); //Validate Requests
 
         //dd($this->getUniqueSlug(Str::slug($request->title, '-')));
@@ -84,9 +85,11 @@ class PostController extends Controller
     public function show($slug)
     {
         $post = $this->slug->findPostBySlug($slug);
+        $comments = $post->comment()->orderBy('created_at', 'DESC')->get();
+        //ddd($comment);
 
         if ($post->status === 1) {
-            return view('posts.show', ['post' => $post]);
+            return view('posts.show', ['post' => $post, 'comments' => $comments]);
         } else {
             abort(404);
         }
@@ -175,7 +178,8 @@ class PostController extends Controller
             abort(404);
         } else {
             $post->delete();
-            return back()
+            $post->slug()->delete();
+            return redirect()->route('dashboard-post')
                 ->with('success', 'Post Deleted');
         }
     }

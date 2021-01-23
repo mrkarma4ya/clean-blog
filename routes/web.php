@@ -9,6 +9,7 @@ Auth::routes();
 Route::get('/', 'PagesController@index')->name('index');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/contact', 'PagesController@contact')->name('contact');
+Route::get('/admin/filemanager', 'PagesController@filemanager')->name('fmanager');
 
 //Post Routes--------------------
 Route::resource('/posts', 'PostController')
@@ -39,7 +40,14 @@ Route::resource('/users', 'UserController')
         'show' => 'users-show'
     ]);
 
+//Comment Routes-----------------
+Route::post('/storecomment', 'CommentController@store')->name('store-comment');
+Route::post('/comments/best-comment/{comment}', 'BestCommentController@store')->name('best-comment');
+Route::delete('/comments/delete/{comment}','CommentController@destroy')->name('comment-delete');
+Route::post('/comments/edit/{comment}','CommentController@update')->name('comment-edit');
 
+//Search Routes------------------
+Route::get('/search','SearchController@index')->name('serarch-index');
 
 //---------------------------------Dashoard Routes---------------------------------------------------------------------------
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
@@ -76,7 +84,7 @@ Route::post('/dashboard/categories/{category}/edit', 'CategoryController@update'
 
 
 //Comment Routes------------------------
-Route::get('/dashboard/comments', 'DashboardController@comment')->name('dashboard-comments');
+Route::get('/dashboard/comments/', 'DashboardController@comment')->name('dashboard-comments');
 
 
 //User Routes---------------------------

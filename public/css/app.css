@@ -18543,3 +18543,7 @@ footer .copyright {
   border-radius: 100%;
 }
 
+p a {
+  text-decoration: none;
+}
+

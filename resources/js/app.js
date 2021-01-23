@@ -3,10 +3,10 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-require('./jquery.min.js');
+// require('./jquery.min.js');
+require('./popper.min.js');
 require('./bootstrap');
 require('./clean-blog');
-
 
 window.Vue = require('vue');
 
@@ -32,3 +32,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+// window.$ = window.jQuery = require('jquery');

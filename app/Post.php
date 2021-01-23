@@ -34,4 +34,14 @@ class Post extends Model
         return $this->findOrFail($id);
     }
 
+    public function comment(){
+        return $this->hasMany('App\Comment');
+    }
+
+    public function setBestReply($comment_id){
+        $this->best_comment_id = $comment_id;
+        $this->save();
+    }
+
+    
 }

@@ -22,4 +22,8 @@ class PagesController extends Controller
     public function contact(){
         return view('contact');
     }
+
+    public function filemanager(){
+        return view('filemanager');
+    }
 }

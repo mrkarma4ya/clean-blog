@@ -1,1 +1,6 @@
-@extends('admin.layout')
+{{-- @extends('admin.layout') --}}
+
+<head>
+   
+</head>
+
