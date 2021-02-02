@@ -11,4 +11,4 @@ Clean-Blog is a Laravel Based Blog system I'm making in order to learn Laravel. 
 - Basic Search
 - Comments with Parent/Child
 
-As I learn more on Laravel, I plan to implement more features on this project. 
+As I learn more on Laravel, I plan to implement more features on this project.  
